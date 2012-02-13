@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Bacon Bar</title>
+    
+    <style type="text/css">
+      body {
+        width: 90%;                 /* initial width */
+        margin: 0 auto;
+        font-size: 1.3em;
+      }
+
+      .span-1, .span-2, .span-3 {
+        min-height: 150px;
+        float: left;
+        margin-right: 3.33333%;     /* 10 / 300 = .0333 */
+        margin-bottom: 10px;
+      }
+
+      .span-1 {
+        width: 30%;                 /* 90 / 300 = .3 */
+        background-color: red;
+      }
+
+      .span-2 {
+        width: 63.33333%;           /* 190 / 300 = .6333 */
+        background-color: blue;
+      }
+      
+      .span-3 {
+        width: 96.66666%;           /* 290 / 300 = .9666 */
+        background-color: lightgreen;
+      }
+      
+      img {
+        float: right;               /* images to the right */
+        max-width: 100%;            /* image will respond */
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="span-3">
+      <h1>The Bacon Poem.</h1>
+      <p><img src="img/bacon.jpg" alt="some bacon" />You taste so good, with fat a-drippin', and in the pan, you're finger-lickin' (good). I never cook you, in portions meager, you hiss and pop, which makes me eager to chomp you down with eggs and toast. But I love you bacon, I love you most.</p>
+    </div>
+  
+    <div class="span-1">
+      <p>Spanning one column.</p>
+    </div>
+    
+    <div class="span-2">
+      <p>Spanning two columns.</p>
+    </div>
+
+    <div class="span-1">
+      <p>Spanning one column.</p>
+    </div>
+
+    <div class="span-1">
+      <p>Spanning one column.</p>
+    </div>
+
+    <div class="span-1">
+      <p>Spanning one column.</p>
+    </div>
+
+  </body>
+</html>
