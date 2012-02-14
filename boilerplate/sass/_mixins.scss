@@ -1,0 +1,27 @@
+@mixin opacity( $value: 1) {
+
+	opacity: $value; 
+	filter: alpha( opacity= $value * 100 );
+}
+
+
+
+@mixin border-radius( $value : 10px ) {
+	
+	-webkit-border-radius: $value; /* Saf3-4, iOS 1-3.2, Android <e;1.6 */
+	   -moz-border-radius: $value; /* FF1-3.6 */
+			border-radius: $value; /* Opera 10.5, IE9, Saf5, Chrome, FF4, iOS 4, Android 2.1+ */
+
+	/* useful if you don't want a bg color from leaking outside the border: */
+	-webkit-background-clip: padding-box; 
+	   -moz-background-clip: padding; 
+		    background-clip: padding-box;
+}
+
+
+@mixin box-shadow( $horiz : .5em , $vert : .5em , $blur : 0px , $spread : 0px , $color : #000000 ) {
+	
+  -webkit-box-shadow: $horiz $vert $blur $spread $color; /* Saf3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+     -moz-box-shadow: $horiz $vert $blur $spread $color; /* FF3.5 - 3.6 */
+          box-shadow: $horiz $vert $blur $spread $color; /* Opera 10.5, IE9, FF4+, Chrome 6+, iOS 5 */
+}
