@@ -9,7 +9,6 @@
   margin-top: 35px;
   margin-left: 0;
   padding: 0;
-  position: relative;
   float: right;
   min-width: 60%;
   border-top: 2px solid #000;
@@ -48,5 +47,5 @@
 /*header nav li:last-child:after {
   content: "";
 }
-
 */
+
