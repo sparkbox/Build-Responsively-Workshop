@@ -1,0 +1,68 @@
+/* add "home" back into the primary nav */
+header nav ul {
+  min-width: 70%;
+  margin-top: 35px;
+}
+header nav li {
+  width: 25%;
+}
+header nav li.home {
+  display: list-item;
+}
+
+
+/* move to two columns in the shirt section */
+.shirt img.product {
+  margin-top: 40px;
+  max-width: 50%;
+  float: left;
+}
+
+
+/* align left will get the shirt to the left */
+.shirt {
+  text-align: left;
+}
+
+
+/* allow for the shirt to the left of the shirt info */
+/* add some padding so we can move the num-votes over the title, like the design */
+.shirt .shirt-info {
+  margin-left: 53%;
+  width: 45%;
+  padding-top: 80px;
+}
+
+
+/* bring the num-votes into alignment with the rest of the info */
+.shirt .num-votes {
+  left: 53%;
+  right: auto;
+}
+
+
+/* a bit more space above the vote button */
+.shirt .vote {
+  margin-top: 20px;
+}
+
+
+
+/************************************************************************
+  Start here for 09-CSS-3
+************************************************************************/
+/* move to two columns on the listing page */
+/* set the width of a single item to 48% and put 2% on the right, then float them left*/
+.listing .single {
+  width: 48%;
+  margin-right: 2%;
+  float: left;
+}
+
+
+/* for browsers that support nth-child, we can remove the right margin on the 2nd column */
+/*   - then float these items right to get a perfect grid */
+.listing .single:nth-child(2n) {
+  margin-right: 0;
+  float: right;
+}
