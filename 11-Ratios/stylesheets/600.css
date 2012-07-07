@@ -1,0 +1,56 @@
+/* add "home" back into the primary nav */
+header nav ul {
+  min-width: 70%;
+  margin-top: 35px;
+}
+header nav li {
+  width: 25%;
+}
+header nav li.home {
+  display: list-item;
+}
+
+
+
+
+/************************************************************************
+  Start here for 07-CSS-2
+************************************************************************/
+/* move to two columns in the shirt section */
+.shirt img.product {
+  margin-top: 40px;
+  max-width: 50%;
+  float: left;
+}
+
+
+/* align left will get the shirt to the left */
+.shirt {
+  text-align: left;
+}
+
+
+/* allow for the shirt to the left of the shirt info */
+/* add some padding so we can move the num-votes over the title, like the design */
+.shirt .shirt-info {
+  margin-left: 53%;
+  width: 45%;
+  padding-top: 80px;
+}
+
+.containing-block {
+  width: 45%;
+}
+
+
+/* bring the num-votes into alignment with the rest of the info */
+.shirt .num-votes {
+  left: 53%;
+  right: auto;
+}
+
+
+/* a bit more space above the vote button */
+.shirt .vote {
+  margin-top: 20px;
+}

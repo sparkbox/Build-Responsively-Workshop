@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+
+<style>
+
+  /* container which maintains the ratio */
+  /* padding-bottom is the magic rule to set the aspect ration */
+  .container {
+    position: relative;
+    height: 0;
+    padding-bottom: 50%;
+  }
+  
+  /* the element that lives in the container */
+  .element {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: red;
+  }
+</style>
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="element">
+    </div>
+
+  </div>
+
+</body>
+</html>

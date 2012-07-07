@@ -1,0 +1,222 @@
+/* make browsers include padding and border inside the width */
+/* http://paulirish.com/2012/box-sizing-border-box-ftw/ */
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* add texture to the background */
+body {
+  background: url(../img/bg-texture-light.jpg) 50% top repeat;
+}
+
+/* basics for links */
+nav a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+
+
+/* center the header and set width to 90% of the browser */
+header {
+  width: 90%;
+  margin-left: 5%;
+/*  background-color: red;*/
+}
+
+
+/* setup the logo by pushing the text off screen and adding background image */
+.site-title {
+  float: left;
+  text-indent: -9999px;
+  width: 120px;
+  height: 116px;
+  margin: 0;
+  background: url(../img/bg-logo-120x116.png) left top no-repeat;
+}
+
+
+/* make room for the logo (130px) */
+nav ul {
+  margin-left: 130px;
+  margin-right: 5%;
+  padding-top: 10px;
+}
+
+
+/* links in the nav, make sure we have reasonable height for touch */
+nav li a {
+  display: block;
+  line-height: 1.9em;
+  text-align: center;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+
+/* remove "home" from nav */
+nav li.home {
+  display: none;
+}
+
+
+/* add some basic layout and some background texture */
+/* set the text to white because the background is dark */
+.shirt {
+  background: #000 url(../img/bg-texture-dark.jpg) 50% top repeat;
+  width: 100%;
+  float: left;
+  position: relative;
+  padding-bottom: 20px;
+  margin-top: 10px;
+  color: #fff;
+  text-align: center;
+}
+
+
+/* we added a wrapper around the contents of the .shirt section */
+/* this will be necessary later because the dark texture runs the full width of the site */
+.shirt .wrapper {
+  width: 90%;
+  margin-left: 5%;
+}
+
+
+/* let's get the shirt image adjusting a bit */
+/* max-width: 100%; tells the image to render at it's actual size, unless it's 
+   wider than it's container, then it will render at the size of the container */
+.shirt img.product {
+  max-width: 100%;
+  margin-top: 20px;
+}
+
+
+/* adjust the type a bit */
+.shirt h1, .shirt p {
+  text-align: left;
+  line-height: 1.5em;
+}
+.shirt h1 {
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  font-weight: lighter;
+  font-size: 1.5em;
+  margin: 0;
+}
+
+
+/* style and position the num-votes tag */
+/* this is hanging from the top in the design, so maybe we can honor that here */
+/* it could work well opposite the "all shirts" link */
+.shirt .num-votes {
+  display: block;
+  text-align: center;
+  background-color: #f1592a;
+  color: #000;
+  position: absolute;
+  top: 0;
+  right: 5%;
+  margin: 0;
+  padding: 5px 10px;
+  text-transform: uppercase;
+  font-size: .5em;
+  letter-spacing: .2em;
+}
+
+
+/* style the strong element (that has the actual number in it) */
+.shirt .num-votes strong {
+  font-size: 2.2em;
+  line-height: 1em;
+  letter-spacing: normal;
+  display: block;
+}
+
+
+/* style and position the see-all link */
+/* this can probably stay upper left, as in the design */
+.shirt .see-all {
+  position: absolute;
+  left: 5%;
+  top: 0;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: .8em;
+  letter-spacing: .1em;
+  background: url(../img/bg-arrow-left.png) 8px 50% no-repeat;
+  padding: .5em .5em .4em 35px;
+}
+
+
+/* let's hide the word "shirts" at the smallest rez */
+/* this could be implied, as we're looking as a single shirt... */
+.shirt .see-all span {
+  display: none;
+}
+
+
+/* and a little style for when they hover this */
+.shirt .see-all:hover {
+  color: #000;
+  background: #f1592a url(../img/bg-arrow-left-dark.png) 8px 50% no-repeat;
+}
+
+
+/* and show the word "shirts" again when the hover */
+.shirt .see-all:hover span {
+  display: inline;
+}
+
+
+/* style the vote link */
+/* the padding is key to making this work as it expands */
+.shirt .vote {
+  display: block;
+  float: left;
+  width: 100%;
+  margin-bottom: 20px;
+  padding: .6em 0 .6em 42%;
+  color: #000;
+  font-size: .8em;
+  font-weight: bold;
+  text-align: left;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: #f1592a url(../img/bg-check.png) 10% 50% no-repeat;
+}
+
+
+
+/* provides some layout for the embedded video */
+.containing-block {
+  margin: 5em 0 1em 0;
+  width: 100%;
+  float: left;
+}
+
+/* intrinsic ratio set here */
+div.video-holder {
+  position: relative;
+  padding-bottom: 56.25%; /* 315 / 560 (based on aspect ration of video) */
+  height: 0;
+}
+
+/* position the iframe inside the container */
+iframe {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+
+
+
+
+
+
+
