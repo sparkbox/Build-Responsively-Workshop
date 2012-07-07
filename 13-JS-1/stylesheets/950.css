@@ -1,0 +1,65 @@
+/* bring in the big logo & adjust font size in nav */
+.site-title {
+  float: left;
+  text-indent: -9999px;
+  width: 240px;
+  height: 232px;
+  margin: 0;
+  background: url(../img/bg-logo-240x232.png) left top no-repeat;
+}
+header nav ul {
+  width: 70%;
+  min-width: 0;
+  margin-top: 75px;
+  margin-right: 0;
+}
+header nav ul li a {
+  font-size: 1.3em;
+  padding: .6em 10px;
+}
+header nav li:after {
+  font-size: 1.7em;
+  top: .45em;
+  font-weight: normal;
+}
+
+
+/* cap the width at 1000px for now */
+/* position relative here so that our absolutely positioned items will also cap */
+.shirt .wrapper, header, .listing {
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+/*  float: none;*/
+}
+
+
+/* remove the left spacing fro the "all shirts" link */
+.shirt .see-all {
+  left: 0;
+}
+
+
+/* one more bump in font sizes here */
+.shirt {
+  font-size: 1.2em;
+}
+
+
+
+/************************************************************************
+  Start here for 09-CSS-3
+************************************************************************/
+/* move to three columns on the listing page */
+/*    the nth-child here resets previous floats/margins */
+.listing .single, .listing .single:nth-child(1n) {
+  width: 32%;
+  margin-right: 2%;
+  float: left;
+}
+
+/* now remove the right margin from the 3rd column */
+.listing .single:nth-child(3n) {
+  margin-right: 0;
+  float: right;
+}

@@ -1,6 +1,7 @@
 UTIL = {
   fire: function( func,funcname, args ) {
     var namespace = APP;  // indicate your obj literal namespace here
+
  
     funcname = ( funcname === undefined ) ? 'init' : funcname;
     if ( func !== '' && namespace[ func ] && typeof namespace[ func ][ funcname ] == 'function' ) {

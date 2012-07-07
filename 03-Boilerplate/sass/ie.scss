@@ -1,2 +1,7 @@
+@import "mixins";
+@import "reset";
+@import "grid";
+
 // List all resolution styles you wish to serve to IE here
-@import "300";
+@import "smallest";
+@import "450";
