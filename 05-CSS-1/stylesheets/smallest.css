@@ -1,5 +1,6 @@
 /* make browsers include padding and border inside the width */
 /* http://paulirish.com/2012/box-sizing-border-box-ftw/ */
+/* http://html5please.com/#box-sizing */
 /** {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;

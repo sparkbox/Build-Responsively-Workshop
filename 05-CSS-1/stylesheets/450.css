@@ -34,6 +34,7 @@
 */
 
 /* add the nav separator in the primary nav */
+/* http://caniuse.com/#search=CSS Generated content */
 /*header nav li:after {
   content: "|";
   position: absolute;
