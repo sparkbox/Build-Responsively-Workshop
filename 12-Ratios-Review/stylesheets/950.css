@@ -24,10 +24,6 @@ header nav li:after {
 }
 
 
-
-/************************************************************************
-  Start here for 07-CSS-2
-************************************************************************/
 /* cap the width at 1000px for now */
 /* position relative here so that our absolutely positioned items will also cap */
 .shirt .wrapper, header {
