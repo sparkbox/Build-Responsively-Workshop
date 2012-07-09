@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <title>nav.js</title>
+  <link rel="stylesheet" href="../rocco-br.css">
+</head>
+<body>
+<div id='container'>
+  <div id="background"></div>
+  <div id="jump_to">
+    Jump To &hellip;
+    <div id="jump_wrapper">
+      <div id="jump_page">
+          <a class="source" href="app.html">app.js</a>
+          <a class="source" href="jquery-1.7.2.min.html">jquery-1.7.2.min.js</a>
+          <a class="source" href="mediaCheck.html">mediaCheck.js</a>
+          <a class="source" href="nav.html">nav.js</a>
+          <a class="source" href="../test/spec/NavSpec.html">NavSpec.js</a>
+      </div>
+    </div>
+  </div>
+  <table cellspacing=0 cellpadding=0>
+  <thead>
+    <tr>
+      <th class=docs><h1>nav.js</h1></th>
+      <th class=code></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr id='section-1'>
+      <td class=docs>
+        <div class="pilwrap">
+          <a class="pilcrow" href="#section-1">&#182;</a>
+        </div>
+        <p>The NAV object houses all of the functionality for the main navigation</p>
+      </td>
+      <td class=code>
+        <div class='highlight'><pre><span class="kd">var</span> <span class="nx">NAV</span> <span class="o">=</span> <span class="p">{</span>
+  </pre></div>
+      </td>
+    </tr>
+    <tr id='section-clear'>
+      <td class=docs>
+        <div class="pilwrap">
+          <a class="pilcrow" href="#section-clear">&#182;</a>
+        </div>
+        <h2>clear</h2>
+
+<p>Remove any styles left over from JavaScript based animations</p>
+      </td>
+      <td class=code>
+        <div class='highlight'><pre>  <span class="nx">clear</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">NAV</span><span class="p">.</span><span class="nx">$mainMenu</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span> <span class="nx">NAV</span><span class="p">.</span><span class="nx">$mainMenu</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span> <span class="s2">&quot;ul&quot;</span> <span class="p">)</span> <span class="p">).</span><span class="nx">removeAttr</span><span class="p">(</span> <span class="s2">&quot;style&quot;</span> <span class="p">);</span>
+  <span class="p">},</span></pre></div>
+      </td>
+    </tr>
+    <tr id='section-slideSubNav'>
+      <td class=docs>
+        <div class="pilwrap">
+          <a class="pilcrow" href="#section-slideSubNav">&#182;</a>
+        </div>
+        <h2>slideSubNav</h2>
+
+<p>Toggle the subNav menus open and closed states</p>
+<blockquote>
+<p><strong>param</strong> e &ndash; event that triggered this method  </p>
+</blockquote>
+      </td>
+      <td class=code>
+        <div class='highlight'><pre>  <span class="nx">slideSubNav</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span> <span class="nx">e</span> <span class="p">)</span> <span class="p">{</span>
+    <span class="nx">e</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span>
+
+    <span class="k">if</span> <span class="p">(</span> <span class="nx">APP</span><span class="p">.</span><span class="nx">getState</span><span class="p">()</span> <span class="o">===</span> <span class="s2">&quot;small&quot;</span> <span class="p">)</span> <span class="p">{</span>
+      <span class="nx">$</span><span class="p">(</span> <span class="k">this</span> <span class="p">).</span><span class="nx">siblings</span><span class="p">(</span> <span class="s2">&quot;ul&quot;</span> <span class="p">).</span><span class="nx">stop</span><span class="p">().</span><span class="nx">slideToggle</span><span class="p">(</span> <span class="s2">&quot;fast&quot;</span> <span class="p">);</span>
+    <span class="p">}</span>
+  <span class="p">},</span></pre></div>
+      </td>
+    </tr>
+    <tr id='section-toggleNav'>
+      <td class=docs>
+        <div class="pilwrap">
+          <a class="pilcrow" href="#section-toggleNav">&#182;</a>
+        </div>
+        <h2>toggleNav</h2>
+
+<p>Toggle the display of the main nav. This is used at smaller sizes
+because the nav is hidden by default for this context.</p>
+      </td>
+      <td class=code>
+        <div class='highlight'><pre>  <span class="nx">toggleNav</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">NAV</span><span class="p">.</span><span class="nx">$mainMenu</span><span class="p">.</span><span class="nx">toggle</span><span class="p">();</span>
+  <span class="p">},</span>
+  </pre></div>
+      </td>
+    </tr>
+    <tr id='section-init'>
+      <td class=docs>
+        <div class="pilwrap">
+          <a class="pilcrow" href="#section-init">&#182;</a>
+        </div>
+        <h2>init</h2>
+
+<p>Setup the appropriate event handlers for the navigation</p>
+      </td>
+      <td class=code>
+        <div class='highlight'><pre>  <span class="nx">init</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span></pre></div>
+      </td>
+    </tr>
+    <tr id='section-6'>
+      <td class=docs>
+        <div class="pilwrap">
+          <a class="pilcrow" href="#section-6">&#182;</a>
+        </div>
+        <p>Cache this for later use</p>
+      </td>
+      <td class=code>
+        <div class='highlight'><pre>    <span class="nx">NAV</span><span class="p">.</span><span class="nx">$mainMenu</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span> <span class="s2">&quot;#mainMenu&quot;</span> <span class="p">);</span></pre></div>
+      </td>
+    </tr>
+    <tr id='section-7'>
+      <td class=docs>
+        <div class="pilwrap">
+          <a class="pilcrow" href="#section-7">&#182;</a>
+        </div>
+        <p>Show/Hide the main menu for smaller screens</p>
+      </td>
+      <td class=code>
+        <div class='highlight'><pre>    <span class="nx">$</span><span class="p">(</span> <span class="s2">&quot;#showNav&quot;</span> <span class="p">).</span><span class="nx">on</span><span class="p">(</span> <span class="s2">&quot;click&quot;</span><span class="p">,</span> <span class="nx">NAV</span><span class="p">.</span><span class="nx">toggleNav</span> <span class="p">);</span>
+    </pre></div>
+      </td>
+    </tr>
+    <tr id='section-8'>
+      <td class=docs>
+        <div class="pilwrap">
+          <a class="pilcrow" href="#section-8">&#182;</a>
+        </div>
+        <p>Click handler for first level nav</p>
+      </td>
+      <td class=code>
+        <div class='highlight'><pre>    <span class="nx">NAV</span><span class="p">.</span><span class="nx">$mainMenu</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span> <span class="s2">&quot;.subMenu&quot;</span> <span class="p">).</span><span class="nx">siblings</span><span class="p">(</span> <span class="s2">&quot;a&quot;</span> <span class="p">).</span><span class="nx">on</span><span class="p">(</span> <span class="s2">&quot;click&quot;</span><span class="p">,</span> <span class="nx">NAV</span><span class="p">.</span><span class="nx">slideSubNav</span> <span class="p">);</span></pre></div>
+      </td>
+    </tr>
+    <tr id='section-9'>
+      <td class=docs>
+        <div class="pilwrap">
+          <a class="pilcrow" href="#section-9">&#182;</a>
+        </div>
+        <p>When the window changes to greater than 410px, we need to clear out any
+inline styles applied via JavaScript animations.</p>
+      </td>
+      <td class=code>
+        <div class='highlight'><pre>    <span class="nx">mediaCheck</span><span class="p">({</span>
+      <span class="nx">media</span><span class="o">:</span> <span class="s1">&#39;(min-width: 410px)&#39;</span><span class="p">,</span>
+      <span class="nx">entry</span><span class="o">:</span> <span class="nx">NAV</span><span class="p">.</span><span class="nx">clear</span>
+    <span class="p">});</span>
+  <span class="p">}</span>
+<span class="p">};</span></pre></div>
+      </td>
+    </tr>
+    <tr id='section-on_DOM_Ready'>
+      <td class=docs>
+        <div class="pilwrap">
+          <a class="pilcrow" href="#section-on_DOM_Ready">&#182;</a>
+        </div>
+        <h2>on DOM Ready</h2>
+
+<p>Run the NAV init method</p>
+
+      </td>
+      <td class=code>
+        <div class='highlight'><pre><span class="nx">$</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">NAV</span><span class="p">.</span><span class="nx">init</span><span class="p">();</span>
+<span class="p">});</span></pre></div>
+      </td>
+    </tr>
+  </table>
+</div>
+</body>

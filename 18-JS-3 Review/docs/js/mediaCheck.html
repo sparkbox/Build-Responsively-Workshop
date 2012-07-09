@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <title>mediaCheck.js</title>
+  <link rel="stylesheet" href="../rocco-br.css">
+</head>
+<body>
+<div id='container'>
+  <div id="background"></div>
+  <div id="jump_to">
+    Jump To &hellip;
+    <div id="jump_wrapper">
+      <div id="jump_page">
+          <a class="source" href="app.html">app.js</a>
+          <a class="source" href="jquery-1.7.2.min.html">jquery-1.7.2.min.js</a>
+          <a class="source" href="mediaCheck.html">mediaCheck.js</a>
+          <a class="source" href="nav.html">nav.js</a>
+          <a class="source" href="../test/spec/NavSpec.html">NavSpec.js</a>
+      </div>
+    </div>
+  </div>
+  <table cellspacing=0 cellpadding=0>
+  <thead>
+    <tr>
+      <th class=docs><h1>mediaCheck.js</h1></th>
+      <th class=code></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr id='section-1'>
+      <td class=docs>
+        <div class="pilwrap">
+          <a class="pilcrow" href="#section-1">&#182;</a>
+        </div>
+        <p>mediacheck will take a hash and execute the specified methods based on the current mediaquery status.</p>
+
+<p>ex.</p>
+
+<p>mediaCheck({<br>
+  media: &lsquo;(min-width: 500px)&rsquo;,<br>
+  entry: function() { &hellip; },<br>
+  exit: function() { &hellip; }<br>
+});</p>
+<blockquote>
+<p><strong>param</strong> Object &ndash; options  </p>
+</blockquote>
+      </td>
+      <td class=code>
+        <div class='highlight'><pre><span class="kd">var</span> <span class="nx">mediaCheck</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span> <span class="nx">options</span> <span class="p">)</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">mq</span><span class="p">;</span>
+    </pre></div>
+      </td>
+    </tr>
+    <tr id='section-mqChange'>
+      <td class=docs>
+        <div class="pilwrap">
+          <a class="pilcrow" href="#section-mqChange">&#182;</a>
+        </div>
+        <h2>mqChange</h2>
+
+<p>Call the entry and exit functions if the media query matches the correct state.</p>
+<blockquote>
+<p><strong>param</strong> MediaQueryList &ndash; mq<br>
+<strong>params</strong> Object &ndash; options  </p>
+</blockquote>
+      </td>
+      <td class=code>
+        <div class='highlight'><pre>  <span class="nx">mqChange</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span> <span class="nx">mq</span><span class="p">,</span> <span class="nx">options</span> <span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span> <span class="nx">mq</span><span class="p">.</span><span class="nx">matches</span> <span class="p">)</span> <span class="p">{</span>
+      <span class="k">if</span> <span class="p">(</span> <span class="k">typeof</span> <span class="nx">options</span><span class="p">.</span><span class="nx">entry</span> <span class="o">===</span> <span class="s2">&quot;function&quot;</span> <span class="p">)</span> <span class="p">{</span>
+        <span class="nx">options</span><span class="p">.</span><span class="nx">entry</span><span class="p">();</span>
+      <span class="p">}</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span> <span class="k">typeof</span> <span class="nx">options</span><span class="p">.</span><span class="nx">exit</span> <span class="o">===</span> <span class="s2">&quot;function&quot;</span> <span class="p">)</span> <span class="p">{</span>
+      <span class="nx">options</span><span class="p">.</span><span class="nx">exit</span><span class="p">();</span>
+    <span class="p">}</span>
+  <span class="p">};</span>
+  
+  <span class="k">if</span> <span class="p">(</span> <span class="nb">window</span><span class="p">.</span><span class="nx">matchMedia</span> <span class="o">!==</span> <span class="kc">undefined</span> <span class="p">)</span> <span class="p">{</span></pre></div>
+      </td>
+    </tr>
+    <tr id='section-3'>
+      <td class=docs>
+        <div class="pilwrap">
+          <a class="pilcrow" href="#section-3">&#182;</a>
+        </div>
+        <p>If the browser has matchMedia support then create a listener</p>
+      </td>
+      <td class=code>
+        <div class='highlight'><pre>    <span class="nx">createListener</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+
+      <span class="nx">mq</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">matchMedia</span><span class="p">(</span> <span class="nx">options</span><span class="p">.</span><span class="nx">media</span> <span class="p">);</span>
+      <span class="nx">mq</span><span class="p">.</span><span class="nx">addListener</span><span class="p">(</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nx">mqChange</span><span class="p">(</span> <span class="nx">mq</span><span class="p">,</span> <span class="nx">options</span> <span class="p">);</span>
+      <span class="p">});</span>
+      <span class="nx">mqChange</span><span class="p">(</span> <span class="nx">mq</span><span class="p">,</span> <span class="nx">options</span> <span class="p">);</span>
+    <span class="p">};</span>
+    <span class="nx">createListener</span><span class="p">();</span>
+    
+  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span></pre></div>
+      </td>
+    </tr>
+    <tr id='section-4'>
+      <td class=docs>
+        <div class="pilwrap">
+          <a class="pilcrow" href="#section-4">&#182;</a>
+        </div>
+        <p>If the browser does not have matchMedia support then create a test to see
+if the mediaquery has been triggered, and then attach a listener to the
+resize event</p>
+
+      </td>
+      <td class=code>
+        <div class='highlight'><pre>    <span class="kd">var</span> <span class="nx">addEvent</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">addEventListener</span> <span class="o">?</span> <span class="nb">window</span><span class="p">.</span><span class="nx">addEventListener</span> <span class="o">:</span> <span class="nb">window</span><span class="p">.</span><span class="nx">attachEvent</span><span class="p">;</span>
+    <span class="kd">var</span> <span class="nx">mmListener</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+      <span class="kd">var</span> <span class="nx">parts</span> <span class="o">=</span> <span class="nx">options</span><span class="p">.</span><span class="nx">media</span><span class="p">.</span><span class="nx">match</span><span class="p">(</span> <span class="sr">/\((.*)-.*:\s*(.*)\)/</span> <span class="p">),</span>
+          <span class="nx">constraint</span> <span class="o">=</span> <span class="nx">parts</span><span class="p">[</span> <span class="mi">1</span> <span class="p">],</span>
+          <span class="nx">value</span> <span class="o">=</span> <span class="nb">parseInt</span><span class="p">(</span> <span class="nx">parts</span><span class="p">[</span> <span class="mi">2</span> <span class="p">],</span> <span class="mi">10</span> <span class="p">),</span>
+          <span class="nx">fakeMatchMedia</span> <span class="o">=</span> <span class="p">{};</span>
+
+      <span class="nx">fakeMatchMedia</span><span class="p">.</span><span class="nx">matches</span> <span class="o">=</span> <span class="nx">constraint</span> <span class="o">===</span> <span class="s2">&quot;max&quot;</span> <span class="o">&amp;&amp;</span> <span class="nx">value</span> <span class="o">&gt;</span> <span class="nb">window</span><span class="p">.</span><span class="nx">outerWidth</span> <span class="o">||</span>
+                               <span class="nx">constraint</span> <span class="o">===</span> <span class="s2">&quot;min&quot;</span> <span class="o">&amp;&amp;</span> <span class="nx">value</span> <span class="o">&lt;</span> <span class="nb">window</span><span class="p">.</span><span class="nx">outerWidth</span><span class="p">;</span>
+      <span class="nx">mqChange</span><span class="p">(</span> <span class="nx">fakeMatchMedia</span><span class="p">,</span> <span class="nx">options</span> <span class="p">);</span>
+    <span class="p">};</span>
+
+
+    <span class="nb">window</span><span class="p">.</span><span class="nx">addEvent</span><span class="p">(</span> <span class="s2">&quot;resize&quot;</span><span class="p">,</span> <span class="nx">mmListener</span><span class="p">);</span>
+    <span class="nx">mmListener</span><span class="p">();</span>
+  <span class="p">}</span>
+<span class="p">};</span></pre></div>
+      </td>
+    </tr>
+  </table>
+</div>
+</body>

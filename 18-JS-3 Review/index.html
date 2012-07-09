@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+  <title>nav</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">  
+
+  <link href="css/nav.css" rel="stylesheet">
+</head>
+
+<body>
+  <div id="sizeTest"></div>
+  <nav>
+    <button id="showNav">Show Menu</button>
+    <ul id="mainMenu">
+      <li><a href="#">Home</a></li>
+      <li>
+        <a href="#">About</a>
+        <ul class="subMenu">
+          <li><a href="#">Team</a></li>
+          <li><a href="#">Beliefs</a></li>
+        </ul>  
+      </li>
+      <li>
+        <a href="#">Portfolio</a>
+        <ul class="subMenu">
+          <li><a href="#">Internal Projects</a></li>
+          <li><a href="#">Client Projects</a></li>
+        </ul>  
+      </li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+  
+  <script src="js/jquery-1.7.2.min.js"></script>
+  <script src="js/mediacheck.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/nav.js"></script>
+</body>
+</html>
