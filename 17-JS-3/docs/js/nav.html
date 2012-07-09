@@ -3,7 +3,7 @@
 <head>
   <meta http-equiv="content-type" content="text/html;charset=utf-8">
   <title>nav.js</title>
-  <link rel="stylesheet" href="../rocco-br.css">
+  <link rel="stylesheet" href="tylesheet=~/projects/rocco-br.css">
 </head>
 <body>
 <div id='container'>
@@ -51,7 +51,7 @@
       </td>
       <td class=code>
         <div class='highlight'><pre>  <span class="nx">clear</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-    <span class="nx">NAV</span><span class="p">.</span><span class="nx">$mainMenu</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span> <span class="nx">NAV</span><span class="p">.</span><span class="nx">$mainMenu</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span> <span class="s2">&quot;ul&quot;</span> <span class="p">)</span> <span class="p">).</span><span class="nx">removeAttr</span><span class="p">(</span> <span class="s2">&quot;style&quot;</span> <span class="p">);</span>
+
   <span class="p">},</span></pre></div>
       </td>
     </tr>
@@ -69,11 +69,7 @@
       </td>
       <td class=code>
         <div class='highlight'><pre>  <span class="nx">slideSubNav</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span> <span class="nx">e</span> <span class="p">)</span> <span class="p">{</span>
-    <span class="nx">e</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span>
-
-    <span class="k">if</span> <span class="p">(</span> <span class="nx">APP</span><span class="p">.</span><span class="nx">getState</span><span class="p">()</span> <span class="o">===</span> <span class="s2">&quot;small&quot;</span> <span class="p">)</span> <span class="p">{</span>
-      <span class="nx">$</span><span class="p">(</span> <span class="k">this</span> <span class="p">).</span><span class="nx">siblings</span><span class="p">(</span> <span class="s2">&quot;ul&quot;</span> <span class="p">).</span><span class="nx">stop</span><span class="p">().</span><span class="nx">slideToggle</span><span class="p">(</span> <span class="s2">&quot;fast&quot;</span> <span class="p">);</span>
-    <span class="p">}</span>
+    
   <span class="p">},</span></pre></div>
       </td>
     </tr>
@@ -89,7 +85,7 @@ because the nav is hidden by default for this context.</p>
       </td>
       <td class=code>
         <div class='highlight'><pre>  <span class="nx">toggleNav</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-    <span class="nx">NAV</span><span class="p">.</span><span class="nx">$mainMenu</span><span class="p">.</span><span class="nx">toggle</span><span class="p">();</span>
+
   <span class="p">},</span>
   </pre></div>
       </td>
@@ -115,7 +111,7 @@ because the nav is hidden by default for this context.</p>
         <p>Cache this for later use</p>
       </td>
       <td class=code>
-        <div class='highlight'><pre>    <span class="nx">NAV</span><span class="p">.</span><span class="nx">$mainMenu</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span> <span class="s2">&quot;#mainMenu&quot;</span> <span class="p">);</span></pre></div>
+        <div class='highlight'><pre></pre></div>
       </td>
     </tr>
     <tr id='section-7'>
@@ -126,8 +122,7 @@ because the nav is hidden by default for this context.</p>
         <p>Show/Hide the main menu for smaller screens</p>
       </td>
       <td class=code>
-        <div class='highlight'><pre>    <span class="nx">$</span><span class="p">(</span> <span class="s2">&quot;#showNav&quot;</span> <span class="p">).</span><span class="nx">on</span><span class="p">(</span> <span class="s2">&quot;click&quot;</span><span class="p">,</span> <span class="nx">NAV</span><span class="p">.</span><span class="nx">toggleNav</span> <span class="p">);</span>
-    </pre></div>
+        <div class='highlight'><pre>    </pre></div>
       </td>
     </tr>
     <tr id='section-8'>
@@ -138,7 +133,7 @@ because the nav is hidden by default for this context.</p>
         <p>Click handler for first level nav</p>
       </td>
       <td class=code>
-        <div class='highlight'><pre>    <span class="nx">NAV</span><span class="p">.</span><span class="nx">$mainMenu</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span> <span class="s2">&quot;.subMenu&quot;</span> <span class="p">).</span><span class="nx">siblings</span><span class="p">(</span> <span class="s2">&quot;a&quot;</span> <span class="p">).</span><span class="nx">on</span><span class="p">(</span> <span class="s2">&quot;click&quot;</span><span class="p">,</span> <span class="nx">NAV</span><span class="p">.</span><span class="nx">slideSubNav</span> <span class="p">);</span></pre></div>
+        <div class='highlight'><pre></pre></div>
       </td>
     </tr>
     <tr id='section-9'>
@@ -150,11 +145,7 @@ because the nav is hidden by default for this context.</p>
 inline styles applied via JavaScript animations.</p>
       </td>
       <td class=code>
-        <div class='highlight'><pre>    <span class="nx">mediaCheck</span><span class="p">({</span>
-      <span class="nx">media</span><span class="o">:</span> <span class="s1">&#39;(min-width: 410px)&#39;</span><span class="p">,</span>
-      <span class="nx">entry</span><span class="o">:</span> <span class="nx">NAV</span><span class="p">.</span><span class="nx">clear</span>
-    <span class="p">});</span>
-  <span class="p">}</span>
+        <div class='highlight'><pre>  <span class="p">}</span>
 <span class="p">};</span></pre></div>
       </td>
     </tr>

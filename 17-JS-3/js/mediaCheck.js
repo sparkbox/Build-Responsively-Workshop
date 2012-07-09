@@ -31,19 +31,26 @@ var mediaCheck = function( options ) {
     }
   };
   
+  /**
+    If the browser has matchMedia support then create a listener
+  */
   if ( window.matchMedia !== undefined ) {
     /**
-     If the browser has matchMedia support then create a listener
+      Create a MediaQueryList object from the media option passed in to mediaCheck.
     */
-    createListener = function() {
-
-      mq = window.matchMedia( options.media );
-      mq.addListener( function() {
-        mqChange( mq, options );
-      });
+    var mq = window.matchMedia( options.media );
+    
+    /**
+      Add a listener to trigger mqChange when the specified media query is triggered.
+    */
+    mq.addListener( function() {
       mqChange( mq, options );
-    };
-    createListener();
+    });
+
+    /**
+      Trigger mqChange to fire any code that needs to run based on the initial mediaquery state.
+    */
+    mqChange( mq, options );
     
   } else {
     /**
@@ -53,17 +60,43 @@ var mediaCheck = function( options ) {
     */
     var addEvent = window.addEventListener ? window.addEventListener : window.attachEvent;
     var mmListener = function() {
-      var parts = options.media.match( /\((.*)-.*:\s*(.*)\)/ ),
-          constraint = parts[ 1 ],
-          value = parseInt( parts[ 2 ], 10 ),
-          fakeMatchMedia = {};
+      /**
+        Pull out the parts of the media query passed in to mediaCheck
+      */
+      var parts = options.media.match( /\((.*)-.*:\s*(.*)\)/ );
+      
+      /**
+        This is the constraint portion of the mediaquery (i.e. min-width, max-width, etc.)
+      */
+      var constraint = parts[ 1 ];
+      
+      /**
+        This is the value portion of the mediaquery (i.e. 510px, 23em, etc.)
+      */
+      var value = parseInt( parts[ 2 ], 10 );
+      
+      /**
+        This is used to simulate the matchMedia.matches result in the call to mqChange
+      */
+      var fakeMatchMedia = {};
 
+      /**
+        This is currently only checking against width
+        TODO: Make this better
+      */
       fakeMatchMedia.matches = constraint === "max" && value > window.outerWidth ||
                                constraint === "min" && value < window.outerWidth;
+      
+      /**
+        Pass the faked matchMedia results to mqChange
+      */
       mqChange( fakeMatchMedia, options );
     };
 
-
+    /**
+      Since this browser does not support mediaquery-based events, we're going
+      to check on resize to see if our mediaqueries have been triggered.
+    */
     window.addEvent( "resize", mmListener);
     mmListener();
   }
