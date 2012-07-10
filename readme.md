@@ -18,21 +18,16 @@ The files in this repo are example exercises used in the Build Responsively Work
 * [CSS3 Media Queries Spec](http://www.w3.org/TR/css3-mediaqueries/)
 * [Media Query Bookmarklet, by Rob Tarr](https://github.com/sparkbox/mediaQueryBookmarklet)
 * [Responsive Images Round-Up, by Jason Grigsby](http://www.cloudfour.com/responsive-imgs/)
-* [src.sencha.io](http://www.sencha.com/learn/how-to-use-src-sencha-io/)
 * [The Boston Globe](http://www.bostonglobe.com)
 * [Build Responsively](http://buildresponsively.com)
 * [Responsive Advertising, by Mark Boulton](http://www.markboulton.co.uk/journal/comments/responsive-advertising)
-* [Responsive Tables, by Chris Coyer](http://css-tricks.com/examples/ResponsiveTables/responsive.php)
-* [Responsive Table Patterns, by The Filament Group](http://filamentgroup.com/examples/rwd-table-patterns/)
 * [Table to Chart, by Scott Jehl](http://jsbin.com/emexa4)
 * [Responsive Menu](https://github.com/mattkersley/Responsive-Menu)
 * [The Foundry](http://seesparkbox.com/foundry)
 * [Future Friendly](http://futurefriend.ly)
 * [Media Queries Gallery](http://mediaqueri.es)
-* [Adaptive Images, by Matt Wilcox](http://adaptive-images.com/)
 * [Responsive Images, by Filament Group](https://github.com/filamentgroup/Responsive-Images)
 * [Image Sizer, by Ethan Marcotte](http://unstoppablerobotninja.com/demos/resize/imgSizer.js)
-* [Respond.js, by Scott Jehl](https://github.com/scottjehl/Respond)
 * [iOS Orientation Change Fix](https://github.com/scottjehl/iOS-Orientationchange-Fix)
 * [Hide Address Bar](https://github.com/scottjehl/Hide-Address-Bar)
 
@@ -54,7 +49,7 @@ The files in this repo are example exercises used in the Build Responsively Work
 
 #### Images
 * [Picturefill] (http://scottjehl.github.com/picturefill)
-* [Sencha.io] (http://docs.sencha.io)
+* [Sencha.io] (http://www.sencha.com/learn/how-to-use-src-sencha-io/)
 * [Adaptive Images] (http://adaptive-images.com)
 
 ### Responsive JavaScript
