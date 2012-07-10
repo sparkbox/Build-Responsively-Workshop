@@ -36,6 +36,38 @@ The files in this repo are example exercises used in the Build Responsively Work
 * [iOS Orientation Change Fix](https://github.com/scottjehl/iOS-Orientationchange-Fix)
 * [Hide Address Bar](https://github.com/scottjehl/Hide-Address-Bar)
 
+### Emerging Patterns
+
+#### Navigation
+* [Top Nav] (http://riothq.com)
+* [Bottom Nav] (http://contentsmagazine.com)
+* [Slide Down Nav] (http://2012.dconstruct.org)
+* [Select Box Nav] (http://fortysevenmedia.com)
+* [Menu Icon Nav] (http://twitter.github.com/bootstrap)
+* [Multi-level] (http://msj.edu)
+
+#### Tables
+* [Show the first column] (http://www.zurb.com/playground/playground/responsive-tables/index.html)
+* [Turn the rows into blocks] (http://css-tricks.com/examples/ResponsiveTables/responsive.php)
+* [Just hide some of it] (http://elvery.net/demo/responsive-tables)
+* [Selective Display] (http://filamentgroup.com/examples/rwd-table-patterns)
+
+#### Images
+* [Picturefill] (http://scottjehl.github.com/picturefill)
+* [Sencha.io] (http://docs.sencha.io)
+* [Adaptive Images] (http://adaptive-images.com)
+
+### Responsive JavaScript
+* [Fixed-Fixed] (http://scottjehl.github.com/fixed-fixed)
+* [Fixed-Fixed Bugs] (http://github.com/scottjehl/Device-Bugs/issues/1)
+* [FitText] (http://fittextjs.com)
+* [SlabText] (http://www.frequency-decoder.com/demo/slabText)
+* [Respond.js] (http://scottjehl.github.com/respond)
+* [eCSSential] (http://github.com/scottjehl/eCSSential)
+* [QuickConcat] (http://github.com/filamentgroup/quickconcat)
+* [MatchMedia.js] (http://github.com/paulirish/matchMedia.js)
+* [mediaCheck] (https://github.com/sparkbox/mediaCheck)
+
 ### Some People to Follow
 * [@beep](http://twitter.com/beep)
 * [@scottjehl](http://twitter.com/scottjehl)
