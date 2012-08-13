@@ -53,6 +53,9 @@ The files in this repo are example exercises used in the Build Responsively Work
 * [Adaptive Images](http://adaptive-images.com)
 
 ### Responsive JavaScript
+* [Modernizr](http://www.modernizr.com/)
+* [jQuery](http://jquery.com)
+* [Unobtrusive Js Execution](http://paulirish.com/2009/markup-based-unobtrusive-comprehensive-dom-ready-execution/)
 * [Aggressive-Enhancement](http://globalmoxie.com/blog/making-of-people-mobile.shtml)
 * [AJAX Includes Modular Content](http://filamentgroup.com/lab/ajax_includes_modular_content)
 * [AJAX Include Pattern](https://github.com/filamentgroup/Ajax-Include-Pattern/)
