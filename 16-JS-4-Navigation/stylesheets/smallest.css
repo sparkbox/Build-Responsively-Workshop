@@ -1,0 +1,666 @@
+/* General ********************************************************************/
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  background: url(../img/bg-texture-light.jpg) 50% top repeat;
+  text-align: center;
+  font-size: 100%;
+}
+
+section, footer, nav {
+  text-align: left;
+  float: left;
+  clear: left;
+}
+
+.wrapper {
+  width: 90%;
+  margin: 0 auto;
+  position: relative;
+}
+
+header, .wrapper, footer nav, .listing {
+  max-width: 1200px;
+}
+
+a {
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+/* Responsive JS hook *******************************************************/
+#sizeTest:after {
+  content: "small";
+  display: none;
+}
+
+
+/* Fonts ********************************************************************/
+nav a,
+p,
+.shirt h1,
+.shirt .vote,
+.shirt .see-all,
+footer small,
+.listing h1,
+.listing .single h2,
+.single .read-more,
+.navToggle {
+  font-family: 'Montserrat', sans-serif;
+}
+
+@font-face {
+  font-family: 'Duke';
+  src: url('../fonts/duke-webfont.eot');
+  src: url('../fonts/duke-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/duke-webfont.woff') format('woff'),
+       url('../fonts/duke-webfont.ttf') format('truetype'),
+       url('../fonts/duke-webfont.svg#DukeRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+
+/* Global Font Colors ********************************************************/
+.site-description,         /* ORANGE */
+.wth,
+.about header p strong,
+.external:after,
+a:hover {
+  color: #f1592a;
+}
+.shirt h1,                 /* WHITE */
+.shirt h2,
+.shirt p,
+.wth abbr,
+.show-me,
+footer nav li a,
+footer small {
+  color: #fff;
+}
+nav li a,                  /* BLACK */
+.see-details {
+  color: #000;
+}
+.shirt .see-all {          /* LIGHT GREY */
+  color: #e3e3e3;
+}
+
+
+
+
+/* Header ********************************************************************/
+header {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.site-title {
+  float: left;
+  text-indent: -9999px;
+  width: 120px;
+  height: 116px;
+  margin: 0 0 0 20px;
+  background: url(../img/bg-logo-120x116.png) left top no-repeat;
+  position: relative;
+  z-index: 1;
+}
+
+/* Primary Nav */
+nav {
+  width: 100%;
+}
+nav ul ul, nav li.home {
+  /* hide the "shirts" sub-nav and the "home" link */
+  display: none;
+}
+nav > ul {
+  display: none;
+  float: right;
+  margin-left: 0;  /* account for the logo */
+  margin-right: 5%;
+  margin-top: 32px;
+  width: 215px;
+}
+nav li a {
+  border-bottom: 1px solid #f1592a;
+  display: block;
+  line-height: 30px;
+  text-align: center;
+  letter-spacing: .1em;
+}
+
+nav li li a {
+  border-bottom-style: dashed;
+  font-size: .7em;
+}
+nav li li:last-child a {
+  border-bottom-style: solid;
+}
+
+.menuBar {
+  background: url(../img/bg-texture-dark.jpg);
+  float: left;
+  min-height: 32px;
+  padding-top: 5px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.navToggle {
+  -webkit-appearance: none;
+  background: transparent url(../img/show-menu.png) no-repeat 100% 6px;
+  border: none;
+  color: #fff;
+  float: right;
+  margin-right: 20px;
+  padding-right: 30px;
+}
+
+.site-description {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  font-size: .8em;
+  float: left;
+  clear: left;
+  width: 100%;
+}
+
+.site-challenge {
+  margin-top: 0;
+  padding: 0 20px;
+  text-transform: uppercase;
+}
+
+.site-challenge strong {
+  font-family: 'Duke', sans-serif;
+  font-size: 6em;
+  opacity: .8;
+  display: inline-block;
+}
+.site-challenge strong time {
+  font-size: .3em;
+  font-weight: normal;
+  display: inline-block;
+  position: relative;
+  top: -0.8em;
+  padding: 0.3em;
+}
+.site-challenge strong time:before,
+.site-challenge strong time:after {
+  content: "";
+  display: block;
+  width: 100%;
+  position: absolute;
+  height: 9px;
+  left: 0;
+  top: -5px;
+  background: url(../img/zig.png) 50% top repeat-x;
+  z-index: 10;
+}
+.site-challenge strong time:after {
+  top: auto;
+  bottom: -5px;
+}
+
+.wth {
+  background: #000;
+  font-size: 0.8em;
+  padding: 0.3em 0.7em;
+  text-decoration: none;
+}
+.wth abbr {
+  border: none;
+}
+
+.show-me {
+  background: #f1592a;
+  padding: 0.3em 0.8em;
+  display: block;
+  margin: 1em 5% 0;
+  width: 90%;
+}
+.show-me:hover {
+  color: #efefef;
+}
+.show-me:after {
+  content: "➨";
+  position: relative;
+  top: 0;
+  right: -0.3em;
+}
+
+
+
+
+/* Shirt ********************************************************************/
+.shirt {
+  background: #000 url(../img/bg-texture-dark.jpg) 50% top repeat;
+  text-align: center;
+  width: 100%;
+  
+  position: relative;
+  padding-bottom: 20px;
+  margin-top: 5px;
+}
+.shirt .shirt-container {
+  width: 100%;
+  float: left;
+}
+
+.shirt img.product {
+  max-width: 100%;
+  margin-top: 20px;
+  cursor: pointer;
+  -webkit-transition: all 0.1s ease;
+  -moz-transition: all 0.1s ease;
+  -o-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+}
+/*.shirt img.product:hover {
+  -webkit-transform: rotate(3deg);
+  -moz-transform: rotate(3deg);
+  -ms-transform: rotate(3deg);
+  -o-transform: rotate(3deg);
+  transform: rotate(3deg);
+}*/
+.shirt h1, .shirt p {
+  text-align: left;
+  line-height: 1.5em;  
+}
+.shirt h1 {
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  font-weight: lighter;
+  font-size: 1.5em;
+  margin: 0;
+}
+.shirt h2 {
+  text-align: left;
+  font-weight: lighter;
+  font-size: 1.3em;
+}
+
+/* the "number-of-votes" tag */
+.shirt .num-votes, .single .num-votes {
+  display: block;
+  width: 50px;
+  position: absolute;
+  right: 5%;
+  top: 0;
+  margin: 0;
+  padding: 10px 0 5px 0;
+  color: #000;
+  background-color: #f1592a;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: .4em;
+  line-height: 1.7em;
+}
+.shirt .num-votes strong {
+  display: block;
+  font-size: 2.2em;
+}
+
+.shirt .num-votes:after {
+  /* draw the angled bottom with CSS triangles */
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -5px;
+  width: 0px;
+  height: 0px;
+  z-index: 15;
+  border-color: transparent #f1592a;
+  border-style: solid;
+  border-width: 0 25px 5px 25px;
+}
+
+.shirt .vote-container {
+  margin-top: 30px;
+}
+.shirt .vote {
+  /* the "vote" button */
+  display: block;
+  width: 80%;
+  margin-left: 10%;
+  margin-bottom: 20px;
+  padding: 10px 15px 10px 32%;
+  color: #000;
+  font-size: .8em;
+  font-weight: bold;
+  text-align: left;
+  position: relative;
+  background: #f1592a url(../img/bg-check.png) 10% 50% no-repeat;
+  float: left;
+}
+/* the twitter credit */
+.shirt .twitter {
+  text-transform: uppercase;
+  font-size: .8em;
+  letter-spacing: .1em;
+  text-align: center;
+  padding-top: 5px;
+}
+
+/* the "all shirts" link */
+.shirt .see-all {
+  position: absolute;
+  left: 0;
+  top: 0px;
+  font-size: .8em;
+  letter-spacing: .1em;
+  background: url(../img/bg-arrow-left.png) 8px 50% no-repeat;
+  padding: 4px 8px 4px 35px;
+
+  /* allow for some CSS animation */
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.shirt .see-all span {
+  /* hide "shirts" at smaller resolutions */
+  display: none;
+}
+.shirt .see-all:hover {
+  /* "all shirts" hover state */
+  color: #000;
+  background: #f1592a url(../img/bg-arrow-left-dark.png) 8px 50% no-repeat;
+}
+
+/* add the zig-zag pattern */
+.shirt:before,
+.shirt:after,
+.shirt .vote:after {
+  content: "";
+  display: block;
+  width: 100%;
+  position: absolute;
+  height: 9px;
+  left: 0;
+  top: -5px;
+  background: url(../img/zig.png) 50% top repeat-x;
+  z-index: 10;
+}
+.shirt:after {
+  top: auto;
+  bottom: -5px;
+}
+
+/* Details Link ********************************************************************/
+.see-details {
+  float: left;
+  background: #f1592a;
+  padding: 0.3em 0.8em;
+}
+.see-details:hover {
+  color: #efefef;
+}
+.see-details:after {
+  content: "➨";
+  position: relative;
+  top: 0;
+  right: -0.3em;
+}
+
+/* Home Page About ********************************************************************/
+.about p {
+  font-size: 0.8em;
+  line-height: 1.5em;
+}
+
+.about header h1 {
+  text-transform: uppercase;
+}
+
+.about header p {
+  font-size: 1.1em;
+  font-weight: normal;
+  text-transform: uppercase;
+  line-height: 1.2em;
+}
+
+.about footer {
+  background: none;
+}
+.about footer div {
+  background: #fff;
+  position: relative;
+  min-height: 20em;
+}
+.about footer div h1 {
+  font-family: sans-serif;
+  font-weight: lighter;
+  font-size: 1em;
+  display: block;
+  position: relative;
+  top: 35px;
+  left: 0;
+  margin-bottom: 4em;
+  text-align: center;
+  text-transform: uppercase;
+}
+.about footer .created-by-sparkbox img,
+.about footer .created-for-build-responsively img {
+  display: block;
+  margin: 0 auto 2em;
+}
+.about footer .created-by-sparkbox img {
+  margin-top: 7em;
+}
+
+
+/* Listing ********************************************************************/
+.listing {
+  width: 90%;
+  margin: 0 auto;
+  float: none;
+}
+.listing h1 {
+  font-size: 2.2em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  font-weight: normal;
+  float: left;
+  width: 100%;
+}
+.listing ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  float: left;
+  clear: left;
+}
+
+/* a single product */
+.about footer a,
+.listing .single {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.listing .info {
+  background-color: #fff;
+  padding: 10px 5% 40px 5%;
+  width: 100%;
+  position: relative;
+  -webkit-box-shadow: 0px 0px 4px 0px #aaa;
+  -moz-box-shadow: 0px 0px 4px 0px #aaa;
+  box-shadow: 0px 0px 4px 0px #aaa;
+}
+.listing .single h2 {
+  color: #000;
+  top: 25px;
+  left: 5%;
+  width: 90%;
+  position: absolute;
+  text-transform: uppercase;
+  font-size: 1em;
+  line-height: 1.1em;
+  font-weight: normal;
+  letter-spacing: .1em;
+  text-shadow: 0px 0px 2px #fff;
+}
+.listing .single img {
+  max-width: 100%;
+  margin-top: 4em;
+}
+
+.single .num-votes {
+  top: auto;
+  width: 60px;
+  bottom: 0;
+  left: 50%;
+  margin-left: -30px;
+  padding: 5px 0;
+  color: #fff;
+  line-height: 1.5em;
+  z-index: 10;
+  letter-spacing: .2em;
+}
+.single .num-votes strong {
+  font-size: 2.2em;
+  letter-spacing: 0;
+}
+.single .num-votes:after {
+  /* draw the angled top with CSS triangles */
+  content: "";
+  display: block;
+  position: absolute;
+  top: -6px;
+  width: 0px;
+  height: 0px;
+  z-index: 15;
+  border-color: transparent #f1592a;
+  border-style: solid;
+  border-width: 6px 30px 0 30px;
+}
+/* put the hash marks inside .info at top and bottom */
+.about footer div:before,
+.single .info:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 15px;
+  left: 0;
+  width: 100%;
+  z-index: 5;
+  height: 9px;
+  background: url(../img/zig.png) 50% top repeat-x;
+}
+
+
+/* Listing & Home page content ********************************************************************/
+.about .external,
+.single .read-more {
+  background-color: #000;
+  color: #fff;
+  display: block;
+  padding: .75em 5%;
+  font-size: .8em;
+  font-weight: normal;
+  letter-spacing: .1em;
+}
+.about .external {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 0;
+  width: 100%;
+}
+.external:after {
+  content: "➨";
+  position: relative;
+  top: 0;
+  right: -0.3em;
+}
+
+.about .eternal img,
+.single .read-more img {
+  margin: -.25em 0 0 8px;
+}
+.about .external:hover,
+.single .read-more:hover {
+  background-color: #ccc;
+  color: #000;
+}
+
+
+section.contact {
+  width: 90%;
+  margin-left: 5%;
+  text-align: center;
+  padding-top: 20px;
+}
+section.contact a {
+  color: #000;
+  text-decoration: underline;
+  text-transform: none;
+}
+.contact a:hover {
+  color: #f1592a;
+}
+
+
+/* Footer ********************************************************************/
+footer {
+  background: #000 url(../img/bg-texture-dark.jpg) 50% top repeat;
+  margin-top: 40px;
+  padding-bottom: 20px;
+  width: 100%;
+}
+footer nav {
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 20px;
+}
+footer nav ul {
+  margin: 0;
+  padding: 0;
+}
+footer nav li {
+  float: left;
+  width: 33%;
+  border-right: 2px solid #fff;
+}
+footer nav li:last-child {
+  border-right: none;
+}
+footer nav li a {
+  font-size: .7em;
+  line-height: normal;
+}
+footer small {
+  text-align: center;
+  width: 90%;
+  display: block;
+  float: left;
+  margin-top: 20px;
+  margin-left: 5%;
+  text-transform: uppercase;
+  font-size: .6em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

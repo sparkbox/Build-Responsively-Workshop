@@ -19,17 +19,12 @@
   
   Content Strategist: Drew Clemens 
   Site: http://seesparkbox.com
-  Twitter: drewclemens
+  Twitter: drewtclemens
   Location: Dayton, OH
   
   Technical Director: Rob Harr 
   Site: http://seesparkbox.com
   Twitter: robertharr
-  Location: Dayton, OH
-
-  Web Developer: Andy Rossi
-  Site: http://seesparkbox.com
-  Twitter: andrewrocco
   Location: Dayton, OH
   
   Software Engineer: Rob Tarr

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <title>nav.js</title>
+  <link rel="stylesheet" href="http://jashkenas.github.com/docco/resources/docco.css">
+</head>
+<body>
+<div id='container'>
+  <div id="background"></div>
+  <table cellspacing=0 cellpadding=0>
+  <thead>
+    <tr>
+      <th class=docs><h1>nav.js</h1></th>
+      <th class=code></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr id='section-1'>
+      <td class=docs>
+        <div class="pilwrap">
+          <a class="pilcrow" href="#section-1">&#182;</a>
+        </div>
+        
+      </td>
+      <td class=code>
+        <div class='highlight'><pre><span class="sr">/**</span>
+<span class="sr"> The NAV object houses all of the functionality for the main navigation</span>
+<span class="sr">*/</span>
+<span class="n">var</span> <span class="no">NAV</span> <span class="o">=</span> <span class="p">{</span>
+  
+  <span class="sr">/**</span>
+
+<span class="sr"># DIVIDER</span>
+
+<span class="sr">   Remove any styles left over from JavaScript based animations</span>
+<span class="sr">  */</span>
+  <span class="n">clear</span><span class="p">:</span> <span class="n">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="no">NAV</span><span class="o">.</span><span class="vg">$mainNav</span><span class="o">.</span><span class="n">add</span><span class="p">(</span> <span class="no">NAV</span><span class="o">.</span><span class="vg">$mainNav</span><span class="o">.</span><span class="n">find</span><span class="p">(</span> <span class="s2">&quot;ul&quot;</span> <span class="p">)</span> <span class="p">)</span><span class="o">.</span><span class="n">removeAttr</span><span class="p">(</span> <span class="s2">&quot;style&quot;</span> <span class="p">);</span>
+  <span class="p">},</span>
+
+  <span class="sr">/**</span>
+
+<span class="sr"># DIVIDER</span>
+
+<span class="sr">   Toggle the subNav menus open and closed states</span>
+
+<span class="sr">   @param e - event that triggered this method</span>
+<span class="sr">  */</span>
+  <span class="n">slideSubNav</span><span class="p">:</span> <span class="n">function</span><span class="p">(</span> <span class="n">e</span> <span class="p">)</span> <span class="p">{</span>
+    <span class="n">e</span><span class="o">.</span><span class="n">preventDefault</span><span class="p">();</span>
+
+    <span class="k">if</span> <span class="p">(</span> <span class="no">DR</span><span class="o">.</span><span class="n">getState</span><span class="p">()</span> <span class="o">===</span> <span class="s2">&quot;small&quot;</span> <span class="p">)</span> <span class="p">{</span>
+      <span class="err">$</span><span class="p">(</span> <span class="n">this</span> <span class="p">)</span><span class="o">.</span><span class="n">siblings</span><span class="p">(</span> <span class="s2">&quot;ul&quot;</span> <span class="p">)</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span><span class="o">.</span><span class="n">slideToggle</span><span class="p">(</span> <span class="s2">&quot;fast&quot;</span> <span class="p">);</span>
+    <span class="p">}</span>
+  <span class="p">},</span>
+
+  <span class="sr">/**</span>
+
+<span class="sr"># DIVIDER</span>
+
+<span class="sr">   Toggle the display of the main nav. This is used at smaller sizes</span>
+<span class="sr">   because the nav is hidden by default for this context.</span>
+<span class="sr">  */</span>
+  <span class="n">toggleNav</span><span class="p">:</span> <span class="n">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="no">NAV</span><span class="o">.</span><span class="vg">$mainNav</span><span class="o">.</span><span class="n">toggle</span><span class="p">();</span>
+  <span class="p">},</span>
+  
+  <span class="sr">/**</span>
+
+<span class="sr"># DIVIDER</span>
+
+<span class="sr">   Setup the appropriate event handlers for the navigation</span>
+<span class="sr">  */</span>  
+  <span class="n">init</span><span class="p">:</span> <span class="n">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="sr">/**</span>
+<span class="sr">     Cache this for later use</span>
+<span class="sr">    */</span>
+    <span class="no">NAV</span><span class="o">.</span><span class="vg">$mainNav</span> <span class="o">=</span> <span class="err">$</span><span class="p">(</span> <span class="s2">&quot;#mainNav&quot;</span> <span class="p">);</span>
+
+    <span class="sr">/**</span>
+<span class="sr">     Show/</span><span class="no">Hide</span> <span class="n">the</span> <span class="n">main</span> <span class="n">menu</span> <span class="k">for</span> <span class="n">smaller</span> <span class="n">screens</span>
+    <span class="o">*/</span>
+    <span class="err">$</span><span class="p">(</span> <span class="s2">&quot;#navToggle&quot;</span> <span class="p">)</span><span class="o">.</span><span class="n">on</span><span class="p">(</span> <span class="s2">&quot;click&quot;</span><span class="p">,</span> <span class="no">NAV</span><span class="o">.</span><span class="n">toggleNav</span> <span class="p">);</span>
+    
+    <span class="sr">/**</span>
+<span class="sr">     Click handler for first level nav</span>
+<span class="sr">    */</span>
+    <span class="no">NAV</span><span class="o">.</span><span class="vg">$mainNav</span><span class="o">.</span><span class="n">find</span><span class="p">(</span> <span class="s2">&quot;.subMenu&quot;</span> <span class="p">)</span><span class="o">.</span><span class="n">siblings</span><span class="p">(</span> <span class="s2">&quot;a&quot;</span> <span class="p">)</span><span class="o">.</span><span class="n">on</span><span class="p">(</span> <span class="s2">&quot;click&quot;</span><span class="p">,</span> <span class="no">NAV</span><span class="o">.</span><span class="n">slideSubNav</span> <span class="p">);</span>
+
+    <span class="sr">/**</span>
+<span class="sr">     When the window changes to greater than 410px, we need to clear out any</span>
+<span class="sr">     inline styles applied via JavaScript animations.</span>
+<span class="sr">    */</span>
+    <span class="n">mediaCheck</span><span class="p">({</span>
+      <span class="n">media</span><span class="p">:</span> <span class="s1">&#39;(min-width: 450px)&#39;</span><span class="p">,</span>
+      <span class="n">entry</span><span class="p">:</span> <span class="no">NAV</span><span class="o">.</span><span class="n">clear</span>
+    <span class="p">});</span>
+  <span class="p">}</span>
+<span class="p">};</span>
+
+<span class="sr">/**</span>
+
+<span class="sr"># DIVIDER</span>
+
+<span class="sr"> Run the NAV init method</span>
+<span class="sr">*/</span>
+<span class="err">$</span><span class="p">(</span><span class="n">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="no">NAV</span><span class="o">.</span><span class="n">init</span><span class="p">();</span>
+<span class="p">});</span></pre></div>
+      </td>
+    </tr>
+    <tr id='section-clear'>
+      <td class=docs>
+        <div class="pilwrap">
+          <a class="pilcrow" href="#section-clear">&#182;</a>
+        </div>
+        <h1>clear</h1>
+      </td>
+      <td class=code>
+        <div class='highlight'><pre></pre></div>
+      </td>
+    </tr>
+    <tr id='section-slideSubNav'>
+      <td class=docs>
+        <div class="pilwrap">
+          <a class="pilcrow" href="#section-slideSubNav">&#182;</a>
+        </div>
+        <h1>slideSubNav</h1>
+      </td>
+      <td class=code>
+        <div class='highlight'><pre></pre></div>
+      </td>
+    </tr>
+    <tr id='section-toggleNav'>
+      <td class=docs>
+        <div class="pilwrap">
+          <a class="pilcrow" href="#section-toggleNav">&#182;</a>
+        </div>
+        <h1>toggleNav</h1>
+      </td>
+      <td class=code>
+        <div class='highlight'><pre></pre></div>
+      </td>
+    </tr>
+    <tr id='section-init'>
+      <td class=docs>
+        <div class="pilwrap">
+          <a class="pilcrow" href="#section-init">&#182;</a>
+        </div>
+        <h1>init</h1>
+      </td>
+      <td class=code>
+        <div class='highlight'><pre></pre></div>
+      </td>
+    </tr>
+    <tr id='section-on_DOM_Ready'>
+      <td class=docs>
+        <div class="pilwrap">
+          <a class="pilcrow" href="#section-on_DOM_Ready">&#182;</a>
+        </div>
+        <h1>on DOM Ready</h1>
+
+      </td>
+      <td class=code>
+        <div class='highlight'><pre></pre></div>
+      </td>
+    </tr>
+  </table>
+</div>
+</body>

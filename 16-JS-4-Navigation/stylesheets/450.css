@@ -1,0 +1,164 @@
+/* Responsive JS hook *******************************************************/
+#sizeTest:after {
+  content: "large";
+}
+
+
+/* Add small black hash marks on top and bottom of these elements */
+header nav ul:before, header nav ul:after {
+  content: "";
+  display: block;
+  width: 100%;
+  position: absolute;
+  height: 4px;
+  left: 0;
+  top: -5px;
+  background: url(../img/zig-nodots.png) 50% bottom repeat-x;
+  z-index: 10;
+}
+header nav ul:after {
+  top: auto;
+  bottom: -5px;
+  background-position: 50% top;
+}
+
+.navToggle {
+  display: none;
+}
+
+/* move nav to single line */
+header nav ul {
+  display: block;
+  margin-top: 20px;
+  margin-left: 0;
+  position: relative;
+  float: right;
+  min-width: 60%;
+}
+header nav li {
+  float: left;
+  width: 33%;
+  text-align: center;
+  position: relative;
+}
+header nav li:after {
+  /* add the nav separator in the primary nav */
+  content: "|";
+  position: absolute;
+  right: 0;
+  top: .5em;
+  font-weight: bold;
+}
+header nav li:last-child:after {
+  /* remove the nav separator form the last child */
+  content: "";
+}
+header nav li a {
+  border: none;
+  padding: .25em 10px;
+  font-size: .9em;
+}
+header nav ul ul {
+  display: none;
+  background: #f1592a;
+  position: absolute;
+  left: -15px;
+  top: 3px;
+  z-index: 100;
+}
+header nav ul li:hover ul {
+  display: block;
+}
+header nav ul ul a:hover {
+  color: #fff;
+}
+header nav ul ul li {
+  width: 100%;
+}
+header nav ul ul li a {
+  border: none;
+}
+header nav li li::after {
+  display: none;
+}
+header nav ul ul::before, header nav ul ul::after {
+  /*display: none;*/
+}
+.menuBar {
+  display: none;
+}
+
+
+/* pull the "site description" up under the nav */
+.site-description {
+  width: 65%;
+  float: right;
+  margin: -40px 2.5% 20px 0;
+  clear: none;
+  font-size: .7em;
+}
+
+
+
+/* increase the size of the "num-votes" tag" */
+.shirt .num-votes {
+  right: 8%;
+  width: 90px;
+  padding: 15px 0 6px 0;
+  font-size: .8em;
+  line-height: 1.9em;
+  letter-spacing: .2em;
+}
+.shirt .num-votes strong {
+  font-size: 2em;
+  letter-spacing: 0em;
+}
+.shirt .num-votes:after {
+  bottom: -8px;
+  border-width: 0 45px 8px 45px;
+}
+.single .num-votes {
+  width: 80px;
+  margin-left: -40px;
+  padding: 10px 0 5px 0;
+  line-height: 1.5em;
+  font-size: .7em;
+}
+.single .num-votes strong {
+  font-size: 2em;
+}
+.single .num-votes:after {
+  /* draw the angled top with CSS triangles */
+  top: -6px;
+  border-width: 6px 40px 0 40px;
+}
+.listing .info {
+  padding: 10px 5% 55px 5%;  /* need a bit more space at the bottom, now that the num-votes tag is bigger */
+}
+
+
+
+/* show "shirts" in the "all shirts" link */
+.shirt .see-all span {
+  display: inline;
+}
+
+
+/* put the "vote" and "twitter cred" items side by side */
+.shirt .vote {
+  padding: 10px 15px 10px 15%;
+  width: 40%;
+}
+.shirt .twitter {
+  float: left;
+  padding-left: 5%;
+}
+
+
+footer nav ul li {
+  width: 25%; 
+}
+footer nav li.home {
+  display: list-item;
+}
+

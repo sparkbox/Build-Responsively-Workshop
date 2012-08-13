@@ -1,0 +1,99 @@
+/* add "home" back into the primary nav */
+header nav ul {
+  min-width: 70%;
+  margin-top: 35px;
+}
+header nav li {
+  width: 25%;
+}
+header nav li.home {
+  display: list-item;
+}
+
+/* adjust the site description for the adjusted nav */
+.site-description {
+  width: 70%;
+  margin-right: 5%;
+  margin-top: -30px;
+}
+
+
+/* move to a two column layout for the shirt section */
+.shirt .shirt-container {
+  width: 50%;
+}
+.shirt img.product {
+  margin-top: 40px;
+}
+.shirt h1 {
+  padding-top: 100px;
+}
+.shirt h1, .shirt h2, .shirt p, .see-details, .shirt .vote-container {
+  margin-left: 53%;
+}
+.shirt .vote {
+  width: 60%;
+  padding-left: 20%;
+  margin-left: 0;
+}
+/* just show the twitter icon at this resolution */
+.shirt .twitter {
+  height: 30px;       /* the icon will be fixed to the bottom, so this determines the vertical alignment */
+  width: 38px;        /* the width of the icon */
+  padding-left: 38px; /* push the text out of the box */
+  overflow: hidden;   /* hides the text */
+  position: relative; /* so we can position the image */
+/*  float: none;*/
+  margin-left: 10%;   /* 53% (column width) + 30% (vote button width) + 5% (margin) */
+}
+.shirt .twitter img {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.shirt .num-votes {
+  left: 53%;
+  float: left;
+}
+
+
+
+/* move to two columns on the listing page */
+.listing .single {
+  width: 48%;
+  margin-right: 2%;
+  float: left;
+}
+.listing .single:nth-child(2n) {
+  margin-right: 0;
+  float: right;
+}
+
+
+
+/* and bump the num-votes size back down */
+.single .num-votes {
+  width: 60px;
+  margin-left: -30px;
+  padding: 5px 0;
+  font-size: .4em;
+}
+.single .num-votes strong {
+  font-size: 2.2em;
+}
+.single .num-votes:after {
+  /* draw the angled top with CSS triangles */
+  border-width: 6px 30px 0 30px;
+}
+
+
+
+
+/* bump up the font size in the footer */
+footer nav li a {
+  font-size: 1em;
+}
+footer small {
+  font-size: .8em;
+  letter-spacing: .1em;
+}

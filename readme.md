@@ -34,34 +34,55 @@ The files in this repo are example exercises used in the Build Responsively Work
 ### Emerging Patterns
 
 #### Navigation
-* [Top Nav] (http://riothq.com)
-* [Bottom Nav] (http://contentsmagazine.com)
-* [Slide Down Nav] (http://2012.dconstruct.org)
-* [Select Box Nav] (http://fortysevenmedia.com)
-* [Menu Icon Nav] (http://twitter.github.com/bootstrap)
-* [Multi-level] (http://msj.edu)
+* [Top Nav](http://riothq.com)
+* [Bottom Nav](http://contentsmagazine.com)
+* [Slide Down Nav](http://2012.dconstruct.org)
+* [Select Box Nav](http://fortysevenmedia.com)
+* [Menu Icon Nav](http://twitter.github.com/bootstrap)
+* [Multi-level](http://msj.edu)
 
 #### Tables
-* [Show the first column] (http://www.zurb.com/playground/playground/responsive-tables/index.html)
-* [Turn the rows into blocks] (http://css-tricks.com/examples/ResponsiveTables/responsive.php)
-* [Just hide some of it] (http://elvery.net/demo/responsive-tables)
-* [Selective Display] (http://filamentgroup.com/examples/rwd-table-patterns)
+* [Show the first column](http://www.zurb.com/playground/playground/responsive-tables/index.html)
+* [Turn the rows into blocks](http://css-tricks.com/examples/ResponsiveTables/responsive.php)
+* [Just hide some of it](http://elvery.net/demo/responsive-tables)
+* [Selective Display](http://filamentgroup.com/examples/rwd-table-patterns)
 
 #### Images
-* [Picturefill] (http://scottjehl.github.com/picturefill)
-* [Sencha.io] (http://www.sencha.com/learn/how-to-use-src-sencha-io/)
-* [Adaptive Images] (http://adaptive-images.com)
+* [Picturefill](http://scottjehl.github.com/picturefill)
+* [Sencha.io](http://www.sencha.com/learn/how-to-use-src-sencha-io/)
+* [Adaptive Images](http://adaptive-images.com)
 
 ### Responsive JavaScript
-* [Fixed-Fixed] (http://scottjehl.github.com/fixed-fixed)
-* [Fixed-Fixed Bugs] (http://github.com/scottjehl/Device-Bugs/issues/1)
-* [FitText] (http://fittextjs.com)
-* [SlabText] (http://www.frequency-decoder.com/demo/slabText)
-* [Respond.js] (http://scottjehl.github.com/respond)
-* [eCSSential] (http://github.com/scottjehl/eCSSential)
-* [QuickConcat] (http://github.com/filamentgroup/quickconcat)
-* [MatchMedia.js] (http://github.com/paulirish/matchMedia.js)
-* [mediaCheck] (https://github.com/sparkbox/mediaCheck)
+* [Aggressive-Enhancement](http://globalmoxie.com/blog/making-of-people-mobile.shtml)
+* [AJAX Includes Modular Content](http://filamentgroup.com/lab/ajax_includes_modular_content)
+* [AJAX Include Pattern](https://github.com/filamentgroup/Ajax-Include-Pattern/)
+* [QuickConcat](https://github.com/filamentgroup/quickconcat)
+* [Conditional Loading for Responsive Designs](http://24ways.org/2011/conditional-loading-for-responsive-designs)
+* [eCSSential](http://github.com/scottjehl/eCSSential)
+
+* [Fixed-Fixed](http://scottjehl.github.com/fixed-fixed)
+* [Fixed-Fixed Bugs](http://github.com/scottjehl/Device-Bugs/issues/1)
+* [iOS Orientation Change](https://github.com/scottjehl/iOS-Orientationchange-Fix)
+* [Respond.js](http://scottjehl.github.com/respond)
+* [MatchMedia.js](http://github.com/paulirish/matchMedia.js)
+* [mediaCheck](https://github.com/sparkbox/mediaCheck)
+
+#### Typography
+* [FitText](http://fittextjs.com)
+* [SlabText](http://www.frequency-decoder.com/demo/slabText)
+* [Lettering.js](http://letteringjs.com/)
+* [KernJS](http://www.kernjs.com/)
+
+#### Touch
+* [Hammer](http://eightmedia.github.com/hammer.js/)
+* [Touchy](https://github.com/jairajs89/Touchy.js)
+* [Gesture Recognition](https://github.com/taitems/Mobile-Web-based-Gesture-Recognition)
+* [Touch Scroll](http://static.uxebu.com/~david/touchscroll/)
+
+#### Sliders
+* [SwipeJS](http://swipejs.com/)
+* [FlexSlider](http://flexslider.woothemes.com/)
+* [Blueberry](http://marktyrrell.com/labs/blueberry/)
 
 ### Some People to Follow
 * [@beep](http://twitter.com/beep)

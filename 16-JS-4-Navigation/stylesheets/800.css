@@ -1,0 +1,70 @@
+/* bring back the "courtesy of" text in twitter cred */
+.shirt .vote {
+  width: 49%;
+  padding-left: 15%;
+  margin-left: 0;
+  max-width: 188px;
+}
+.shirt .twitter {
+  height: auto;
+  width: auto;
+  padding-left: 0;
+  overflow: auto;
+  position: static;
+  margin-left: 5%;
+}
+.shirt .twitter img {
+  position: static;
+}
+
+/* widen num-votes */
+.shirt .num-votes {
+  font-size: 1em;
+  width: 130px;
+}
+.shirt .num-votes:after {
+  border-width: 0 65px 8px 65px;
+}
+
+
+
+/* bump up the num-votes tag size again */
+.single .num-votes {
+  width: 80px;
+  margin-left: -40px;
+  padding: 10px 0 5px 0;
+  line-height: 1.5em;
+  font-size: .7em;
+}
+.single .num-votes strong {
+  font-size: 2em;
+}
+.single .num-votes:after {
+  /* draw the angled top with CSS triangles */
+  top: -6px;
+  border-width: 6px 40px 0 40px;
+}
+
+
+
+
+/* adjust font sizes in the .shirt and .listing*/
+.shirt h1 {
+  font-size: 1.8em;
+  padding-top: 120px;
+}
+.shirt p {
+  line-height: 1.6em;
+}
+.listing .single h2 {
+  font-size: 1.2em;
+}
+
+
+/* fix the width of the footer nav from here on up */
+footer nav {
+  width: 720px;                 /* 90% of 800 = 720px */
+  margin: 20px auto 0 auto;
+  float: none;
+  clear: none;
+}

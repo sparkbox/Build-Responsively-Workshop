@@ -1,0 +1,101 @@
+$navBackground: #000;
+$subNavBackground: #555;
+
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#sizeTest:after {
+  content: "small";
+  display: none;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+}
+
+nav {
+  background: $navBackground;
+  float: left;
+  width: 100%;
+
+  button {
+    background: url(../img/show-menu.jpg) no-repeat;
+    border: none;
+    float: left;
+    height: 44px;
+    text-indent: -9999px;
+    width: 44px;
+  }
+
+  ul {
+    clear: left;
+    display: none;
+    list-style: none;
+    margin: 0;
+    padding: 10px 0;
+    width: 100%;
+
+    ul {
+      background: $subNavBackground;
+      display: none;
+      width: auto;
+    }
+  }
+
+  li {
+    padding: 10px 0;
+    text-align: center;
+    width: 100%;
+
+    li {
+      float: none;
+    }
+  }
+
+  a {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+  }
+}
+
+@media all and (min-width: 410px) {
+
+  #sizeTest:after {
+    content: "large";
+  }
+
+  nav {    
+    button {
+      display: none;
+    }
+    ul {
+      display: block;
+      float: left;
+
+      ul {
+        background: $navBackground;
+        position: absolute;
+      }
+    }
+    li {
+      float: left;
+      position: relative;
+      text-align: left;
+      width: auto;
+  
+      &:hover ul {
+       display: block;
+      }
+
+      a {
+        padding: 0 28px;
+        white-space: nowrap;
+      } 
+    }
+  }
+}
