@@ -26,7 +26,7 @@ header nav li:after {
 
 /* cap the width at 1000px for now */
 /* position relative here so that our absolutely positioned items will also cap */
-.shirt .wrapper, header, .listing {
+.item .wrapper, header, .listing {
   max-width: 1100px;
   margin: 0 auto;
   position: relative;
@@ -34,13 +34,13 @@ header nav li:after {
 
 
 /* remove the left spacing fro the "all shirts" link */
-.shirt .see-all {
+.item .see-all {
   left: 0;
 }
 
 
 /* one more bump in font sizes here */
-.shirt {
+.item {
   font-size: 1.2em;
 }
 

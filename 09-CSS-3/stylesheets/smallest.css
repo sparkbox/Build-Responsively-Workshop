@@ -64,7 +64,7 @@ nav li.home {
 
 /* add some basic layout and some background texture */
 /* set the text to white because the background is dark */
-.shirt {
+.item {
   background: #000 url(../img/bg-texture-dark.jpg) 50% top repeat;
   width: 100%;
   float: left;
@@ -76,9 +76,9 @@ nav li.home {
 }
 
 
-/* we added a wrapper around the contents of the .shirt section */
+/* we added a wrapper around the contents of the .item section */
 /* this will be necessary later because the dark texture runs the full width of the site */
-.shirt .wrapper {
+.item .wrapper {
   width: 90%;
   margin-left: 5%;
 }
@@ -87,18 +87,18 @@ nav li.home {
 /* let's get the shirt image adjusting a bit */
 /* max-width: 100%; tells the image to render at it's actual size, unless it's 
    wider than it's container, then it will render at the size of the container */
-.shirt img.product {
+.item img.product {
   max-width: 100%;
   margin-top: 20px;
 }
 
 
 /* adjust the type a bit */
-.shirt h1, .shirt p {
+.item h1, .item p {
   text-align: left;
   line-height: 1.5em;
 }
-.shirt h1 {
+.item h1 {
   text-transform: uppercase;
   letter-spacing: .1em;
   font-weight: lighter;
@@ -110,7 +110,7 @@ nav li.home {
 /* style and position the num-votes tag */
 /* this is hanging from the top in the design, so maybe we can honor that here */
 /* it could work well opposite the "all shirts" link */
-.shirt .num-votes, .single .num-votes {
+.item .num-votes, .single .num-votes {
   display: block;
   text-align: center;
   background-color: #f1592a;
@@ -127,7 +127,7 @@ nav li.home {
 
 
 /* style the strong element (that has the actual number in it) */
-.shirt .num-votes strong {
+.item .num-votes strong {
   font-size: 2.2em;
   line-height: 1em;
   letter-spacing: normal;
@@ -137,7 +137,7 @@ nav li.home {
 
 /* style and position the see-all link */
 /* this can probably stay upper left, as in the design */
-.shirt .see-all {
+.item .see-all {
   position: absolute;
   left: 5%;
   top: 0;
@@ -153,27 +153,27 @@ nav li.home {
 
 /* let's hide the word "shirts" at the smallest rez */
 /* this could be implied, as we're looking as a single shirt... */
-.shirt .see-all span {
+.item .see-all span {
   display: none;
 }
 
 
 /* and a little style for when they hover this */
-.shirt .see-all:hover {
+.item .see-all:hover {
   color: #000;
   background: #f1592a url(../img/bg-arrow-left-dark.png) 8px 50% no-repeat;
 }
 
 
 /* and show the word "shirts" again when the hover */
-.shirt .see-all:hover span {
+.item .see-all:hover span {
   display: inline;
 }
 
 
 /* style the vote link */
 /* the padding is key to making this work as it expands */
-.shirt .vote {
+.item .vote {
   display: block;
   float: left;
   width: 100%;

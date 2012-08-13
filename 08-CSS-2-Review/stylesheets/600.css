@@ -17,7 +17,7 @@ header nav li.home {
   Start here for 07-CSS-2
 ************************************************************************/
 /* move to two columns in the shirt section */
-.shirt img.product {
+.item img.product {
   margin-top: 40px;
   max-width: 50%;
   float: left;
@@ -25,14 +25,14 @@ header nav li.home {
 
 
 /* align left will get the shirt to the left */
-.shirt {
+.item {
   text-align: left;
 }
 
 
 /* allow for the shirt to the left of the shirt info */
 /* add some padding so we can move the num-votes over the title, like the design */
-.shirt .shirt-info {
+.item .item-info {
   margin-left: 53%;
   width: 45%;
   padding-top: 80px;
@@ -40,13 +40,13 @@ header nav li.home {
 
 
 /* bring the num-votes into alignment with the rest of the info */
-.shirt .num-votes {
+.item .num-votes {
   left: 53%;
   right: auto;
 }
 
 
 /* a bit more space above the vote button */
-.shirt .vote {
+.item .vote {
   margin-top: 20px;
 }

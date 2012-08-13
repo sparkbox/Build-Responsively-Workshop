@@ -54,13 +54,13 @@ header nav li:last-child:after {
   Start here for 07-CSS-2
 ************************************************************************/
 /* bump up the size of the num-votes tag */
-.shirt .num-votes {
+.item .num-votes {
   font-size: .8em;
 }
 
 
 /* add the word "shirts" back into the see-all link */
-.shirt .see-all span {
+.item .see-all span {
   display: inline;
 }
 

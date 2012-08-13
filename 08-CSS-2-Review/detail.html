@@ -22,7 +22,7 @@
                only all and (min-device-pixel-ratio: 1.5)">
 
 
-  <!--[if lte IE 8]>
+  <!--[if (lte IE 8)&(!IEMobile)]>
     <link rel="stylesheet" href="stylesheets/450.css">
     <link rel="stylesheet" href="stylesheets/600.css">
     <link rel="stylesheet" href="stylesheets/950.css">
@@ -46,11 +46,11 @@
     </nav>
   </header>
 
-  <section class="shirt">
+  <div class="item">
     <div class="wrapper">
       <img class="product" src="img/shirt-1.png" alt="Shirt 1">
 
-      <div class="shirt-info">
+      <div class="item-info">
         <h1>Really Long Shirt 3 Title</h1>
         <p>A short description of the shirt would go here and be very clever, witty, etc. As I said before, a short descriptor of the shirt would go here.</p>
 
@@ -60,7 +60,7 @@
         <p class="num-votes"><strong>1059</strong> votes</p>
       </div>
     </div> <!--.wrapper-->
-  </section> <!--.shirt-->
+  </div> <!--.item-->
 
 </body>
 </html>
