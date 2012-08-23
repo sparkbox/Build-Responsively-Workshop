@@ -1,18 +1,18 @@
 <!doctype html>
 <html>
 <head>
-  <title>Fake Blog Post</title>
+  <title>GOOGLE ANALYTICS AND THE RESIZE EVENT</title>
 <head>
 
 <body>
   <article>
-    <h1>This is a blog post</h1>
+    <h1>GOOGLE ANALYTICS AND THE RESIZE EVENT</h1>
 
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nulla vitae elit libero, a pharetra augue. Cras mattis consectetur purus sit amet fermentum. Donec id elit non mi porta gravida at eget metus. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+    <p>There's an ongoing debate in the responsive web design community - do users resize their browser windows or not? During our Build Responsively Workshop in Columbus, Ben mentioned that he would love to have a way to track browser resize events. It seemed simple enough, so I put together this gist as a quick proof of concept:</p>
 
-    <p>Vestibulum id ligula porta felis euismod semper. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nulla vitae elit libero, a pharetra augue. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+    <p>This creates a handler for the browser resize event in order to fire a Google Analytics call with the browser dimensions. This solution waits for a 1 second pause before making the call to avoid a problem where some browsers would continuously fire the resize event.</p>
 
-    <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec sed odio dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae elit libero, a pharetra augue. Donec ullamcorper nulla non metus auctor fringilla.</p>
+    <p>Drop this code into your JavaScript, check out "events" within the "content" tab of Google Analytics, and you can see for yourself how many people are resizing your site.</p>
 
     <footer>
       <h2>Author: Rob Tarr</h2>
@@ -27,6 +27,5 @@
   </article>
 
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-  <script src="js/mediaCheck.js"></script>
   <script src="js/enhanced.js"></script>
 </body>

@@ -64,6 +64,7 @@ header nav ul ul {
   position: absolute;
   left: -15px;
   top: 3px;
+  width: 16em;
   z-index: 100;
 }
 header nav ul li:hover ul {

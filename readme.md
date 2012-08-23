@@ -30,6 +30,7 @@ The files in this repo are example exercises used in the Build Responsively Work
 * [Image Sizer, by Ethan Marcotte](http://unstoppablerobotninja.com/demos/resize/imgSizer.js)
 * [iOS Orientation Change Fix](https://github.com/scottjehl/iOS-Orientationchange-Fix)
 * [Hide Address Bar](https://github.com/scottjehl/Hide-Address-Bar)
+* [Progressive Enhancement](http://en.wikipedia.org/wiki/Progressive_enhancement)
 
 ### Emerging Patterns
 
@@ -79,13 +80,17 @@ The files in this repo are example exercises used in the Build Responsively Work
 #### Touch
 * [Hammer](http://eightmedia.github.com/hammer.js/)
 * [Touchy](https://github.com/jairajs89/Touchy.js)
-* [Gesture Recognition](https://github.com/taitems/Mobile-Web-based-Gesture-Recognition)
 * [Touch Scroll](http://static.uxebu.com/~david/touchscroll/)
 
 #### Sliders
 * [SwipeJS](http://swipejs.com/)
 * [FlexSlider](http://flexslider.woothemes.com/)
 * [Blueberry](http://marktyrrell.com/labs/blueberry/)
+
+### Apps
+* [Codekit](http://incident57.com/codekit/)
+* [Scout](http://mhs.github.com/scout-app/)
+* [Adobe Shadow](http://labs.adobe.com/technologies/shadow/)
 
 ### Some People to Follow
 * [@beep](http://twitter.com/beep)

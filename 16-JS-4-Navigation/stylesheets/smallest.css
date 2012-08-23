@@ -183,6 +183,7 @@ nav li li:last-child a {
 .site-challenge strong {
   font-family: 'Duke', sans-serif;
   font-size: 6em;
+  font-weight: normal;
   opacity: .8;
   display: inline-block;
 }

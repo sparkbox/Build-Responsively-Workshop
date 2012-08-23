@@ -9,7 +9,7 @@ $subNavBackground: #555;
 
 #sizeTest:after {
   content: "small";
-  display: none;
+  // display: none;
 }
 
 body {
@@ -63,7 +63,7 @@ nav {
   }
 }
 
-@media all and (min-width: 410px) {
+@media all and (min-width: 450px) {
 
   #sizeTest:after {
     content: "large";

@@ -1,7 +1,8 @@
 function showTweets( data ) {
   var tweets = "";
+  var i;
 
-  for ( var i in data ) {
+  for ( i in data ) {
     tweets += "<p class=\"tweet\">" + data[i].text + "</p>";
   }
   $( ".enhanced-twitter" ).html( tweets );
