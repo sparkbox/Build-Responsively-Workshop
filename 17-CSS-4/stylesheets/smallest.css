@@ -1,0 +1,58 @@
+/* make browsers include padding and border inside the width */
+/* http://paulirish.com/2012/box-sizing-border-box-ftw/ */
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+
+/* basics for links */
+nav a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+
+
+/* center the header and set width to 90% of the browser */
+header {
+  width: 90%;
+  margin-left: 5%;
+/*  background-color: red;*/
+}
+
+
+/* setup the logo by pushing the text off screen and adding background image */
+.site-title {
+  float: left;
+  text-indent: -9999px;
+  width: 120px;
+  height: 116px;
+  margin: 0;
+  background: url(../img/bg-logo-120x116.png) left top no-repeat;
+}
+
+
+/* make room for the logo (130px) */
+nav ul {
+  margin-left: 130px;
+  margin-right: 5%;
+  padding-top: 10px;
+}
+
+
+/* links in the nav, make sure we have reasonable height for touch */
+nav li a {
+  display: block;
+  line-height: 1.9em;
+  text-align: center;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+
+/* remove "home" from nav */
+nav li.home {
+  display: none;
+}

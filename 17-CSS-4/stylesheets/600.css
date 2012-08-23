@@ -1,0 +1,11 @@
+/* add "home" back into the primary nav */
+header nav ul {
+  min-width: 70%;
+  margin-top: 35px;
+}
+header nav li {
+  width: 25%;
+}
+header nav li.home {
+  display: list-item;
+}

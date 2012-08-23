@@ -1,0 +1,52 @@
+/*body {
+  background-color: red;
+}
+*/
+
+/* move nav to single line */
+/* min-width helps this work at higher resolutions */
+header nav ul {
+  margin-top: 35px;
+  margin-left: 0;
+  padding: 0;
+  position: relative;
+  float: right;
+  min-width: 60%;
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
+}
+
+
+/* move to horizontal by floating <li>s left */
+/* position: relative needed for the :after later */
+header nav li {
+  float: left;
+  width: 33%;
+  text-align: center;
+  position: relative;
+}
+
+
+/* tweaks to padding/font-size */
+header nav li a {
+  padding: .25em 10px;
+  font-size: .9em;
+}
+
+
+/* add the nav separator in the primary nav */
+header nav li:after {
+  content: "|";
+  position: absolute;
+  right: 0;
+  top: .4em;
+  font-weight: bold;
+}
+
+
+/* remove the nav separator form the last child */
+header nav li:last-child:after {
+  content: "";
+}
+
+

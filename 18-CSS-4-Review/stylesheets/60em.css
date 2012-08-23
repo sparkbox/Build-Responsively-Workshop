@@ -1,0 +1,24 @@
+/* bring in the big logo & adjust font size in nav */
+.site-title {
+  float: left;
+  text-indent: -9999px;
+  width: 240px;
+  height: 232px;
+  margin: 0;
+  background: url(../img/bg-logo-240x232.png) left top no-repeat;
+}
+header nav ul {
+  width: 70%;
+  min-width: 0;
+  margin-top: 75px;
+  margin-right: 0;
+}
+header nav ul li a {
+  font-size: 1.3em;
+  padding: .6em 10px;
+}
+header nav li:after {
+  font-size: 1.7em;
+  top: .45em;
+  font-weight: normal;
+}
