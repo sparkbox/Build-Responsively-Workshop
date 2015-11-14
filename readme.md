@@ -9,7 +9,7 @@ The files in this repo are example exercises used in the Build Responsively Work
 * [Responsive Web Design, book by Ethan Marcotte](http://www.abookapart.com/products/responsive-web-design)
 * [Adaptive Web Design, book by Aaron Gustafson](http://easy-readers.net/books/adaptive-web-design/)
 * [Head First Mobile Web, book by Jason Grigsby and Lyza Danger Gardner](http://www.amazon.com/Head-First-Mobile-Brain-Friendly-Guides/dp/1449302661)
-* [The Semantic Grid System](http://semantic.gs/)
+* [The Semantic Grid System](https://github.com/tylertate/semantic.gs)
 * [LESS CSS](http://lesscss.org/)
 * [SCSS/SASS CSS](sass-lang.com)
 * [Fluid Grids, by Ethan Marcotte](http://www.alistapart.com/articles/fluidgrids/)
